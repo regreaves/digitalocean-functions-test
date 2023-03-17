@@ -3,6 +3,7 @@ function main(args) {
     headers: {
       'Content-Type': 'application/json'
     },
+    statusCode: 200,
     body: `Hello, ${args?.name || "stranger"}!`
   }
 }
