@@ -23,7 +23,7 @@ async function main(args) {
       'Content-Type': 'application/json'
     },
     statusCode: 200,
-    body: `Hello, ${args?.name || "stranger"}! data: //...`
+    body: `Hello, ${args?.name || "stranger"}! data: ${data}`
   }
 }
 
