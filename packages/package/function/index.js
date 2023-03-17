@@ -6,7 +6,7 @@ async function main(args) {
     
     session.close();
   } catch (err) {
-    //
+    return { err };
   }
 
   return {
