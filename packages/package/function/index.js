@@ -1,7 +1,7 @@
 const mysqlx = require('@mysql/xdevapi');
 
 async function main(args) {
-  const session = await mysqlx.getSession("mysql://doadmin:AVNS_1OhWgGQoFCngSBucL6b@db-mysql-nyc1-37474-do-user-12845046-0.b.db.ondigitalocean.com:25060/defaultdb?ssl-mode=REQUIRED");
+  const session = await mysqlx.getSession($DATABASE_URL);
 
   const data = session.inspect();
 
