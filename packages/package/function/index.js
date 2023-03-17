@@ -6,7 +6,7 @@ async function main(args) {
   let data;
 
   try {
-    const session = await mysqlx.getSession(url);
+    const session = await mysqlx.getSession('mysql://doadmin:AVNS_1OhWgGQoFCngSBucL6b@db-mysql-nyc1-37474-do-user-12845046-0.b.db.ondigitalocean.com:25060/defaultdb?ssl-mode=REQUIRED');
 
     data = session.inspect();
 
