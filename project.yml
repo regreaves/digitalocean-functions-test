@@ -1,8 +1,7 @@
 environment:
-  - DATABASE_URL: ${db-mysql-nyc1-37474.DATABASE_URL}
+  - DATABASE_URL: "mysql://doadmin:AVNS_1OhWgGQoFCngSBucL6b@db-mysql-nyc1-37474-do-user-12845046-0.b.db.ondigitalocean.com:25060/defaultdb?ssl-mode=REQUIRED"
 packages:
   - name: package
-  
     functions:
       - name: function
         runtime: nodejs:18
