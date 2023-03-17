@@ -3,9 +3,3 @@ packages:
     functions:
       - name: function
         runtime: nodejs:18
-        environment:
-          MYSQLX_USER: "${MYSQLX_USER}"
-          MYSQLX_PASSWORD: "${MYSQLX_PASSWORD}"
-          MYSQLX_HOST: "${MYSQLX_HOST}"
-          MYSQLX_PORT: "${MYSQLX_PORT}"
-          MYSQLX_SCHEMA: "${MYSQLX_SCHEMA}"
