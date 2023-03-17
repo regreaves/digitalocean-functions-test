@@ -3,10 +3,12 @@ const mysqlx = require('@mysql/xdevapi');
 const url = process.env.DATABASE_URL;
 
 function main(args) {
+  let data;
+
   try {
     const session = await mysqlx.getSession(url);
 
-    console.log(session.inspect());
+    data = session.inspect();
 
     session.close();
   } catch (err) {
@@ -18,7 +20,7 @@ function main(args) {
       'Content-Type': 'application/json'
     },
     statusCode: 200,
-    body: `Hello, ${args?.name || "stranger"}!`
+    body: `Hello, ${args?.name || "stranger"}! data: ${data}`
   }
 }
 
