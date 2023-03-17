@@ -1,5 +1,8 @@
+environment:
+  - DATABASE_URL: ${db-mysql-nyc1-37474.DATABASE_URL}
 packages:
   - name: package
+  
     functions:
       - name: function
         runtime: nodejs:18
