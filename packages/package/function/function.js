@@ -1,6 +1,6 @@
 function main(args) {
   return {
-    "body": "content"
+    body: 'content'
   }
 }
 
