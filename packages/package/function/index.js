@@ -1,6 +1,9 @@
 function main(args) {
   return {
-    body: 'content'
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: `Hello, ${args?.name || "stranger"}!`
   }
 }
 
