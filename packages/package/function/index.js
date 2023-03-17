@@ -1,5 +1,5 @@
 async function main(args) {
-  return { body: "content" };
+  return { body: "duh" };
 }
 
 module.exports = { main };
