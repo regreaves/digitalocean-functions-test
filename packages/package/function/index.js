@@ -2,7 +2,7 @@ const mysqlx = require('@mysql/xdevapi');
 
 const url = process.env.DATABASE_URL;
 
-function main(args) {
+async function main(args) {
   let data;
 
   try {
