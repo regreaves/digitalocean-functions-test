@@ -1,4 +1,7 @@
 {
   "name": "function",
-  "main": "index.js"
+  "main": "index.js",
+  "dependencies": {
+    "@mysql/xdevapi": "^8.0.32"
+  }
 }
