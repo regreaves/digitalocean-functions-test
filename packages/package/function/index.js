@@ -1,19 +1,22 @@
 const mysqlx = require('@mysql/xdevapi');
 
-const url = process.env.DATABASE_URL;
-
 async function main(args) {
-  let data;
+  const config = {
+    user: process.env.MYSQLX_USER,
+    password: process.env.MYSQLX_PASSWORD,
+    host: process.env.MYSQLX_HOST,
+    port: Number.parseInt(process.env.MYSQLX_PORT),
+    schema: process.env.MYSQLX_SCHEMA,
+    tls: {
+      enabled: true
+    }
+  };
 
-  try {
-    const session = await mysqlx.getSession(url);
+  const session = await mysqlx.getSession(config);
 
-    data = session.inspect();
+  const data = session.inspect();
 
-    session.close();
-  } catch (err) {
-    //
-  }
+  session.close();
 
   return {
     headers: {
