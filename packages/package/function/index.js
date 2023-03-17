@@ -1,8 +1,6 @@
-require('dotenv').config();
-
-const mysqlx = require('@mysql/xdevapi');
-
 async function main(args) {
+  const mysqlx = require('@mysql/xdevapi');
+
   const config = {
     user: process.env.MYSQLX_USER,
     password: process.env.MYSQLX_PASSWORD,
@@ -16,7 +14,7 @@ async function main(args) {
 
   const session = await mysqlx.getSession(config);
 
-  const data = session.inspect();
+  const data = JSON.stringify(session.inspect());
 
   session.close();
 
