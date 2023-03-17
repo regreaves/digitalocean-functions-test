@@ -1,0 +1,5 @@
+packages:
+  - name: package
+    functions:
+      - name: function
+        runtime: nodejs:18
